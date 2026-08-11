@@ -1,0 +1,343 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #0f172a;
+    color: #f8fafc;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #1e293b;
+    border-bottom: 1px solid #334155;
+}
+
+.navbar .logo a {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #38bdf8;
+    text-decoration: none;
+}
+
+.navbar nav ul {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+}
+
+.navbar nav a {
+    color: #cbd5e1;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.navbar nav a:hover {
+    color: #38bdf8;
+}
+
+.container {
+    flex: 1;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.hero {
+    text-align: center;
+    padding: 4rem 1rem;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #f1f5f9;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: #94a3b8;
+    margin-bottom: 2rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 0.5rem;
+}
+
+.btn-primary {
+    background-color: #0284c7;
+    color: #ffffff;
+}
+
+.btn-secondary {
+    border: 1px solid #0284c7;
+    color: #38bdf8;
+}
+
+.footer {
+    text-align: center;
+    padding: 1.5rem;
+    background-color: #1e293b;
+    color: #64748b;
+    font-size: 0.9rem;
+}
+
+/* Estilos Formulario de Autenticación */
+.auth-card {
+    max-width: 450px;
+    margin: 3rem auto;
+    background-color: #1e293b;
+    padding: 2.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+    border: 1px solid #334155;
+}
+
+.auth-card h2 {
+    margin-bottom: 1.5rem;
+    color: #f8fafc;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 1.25rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 0.5rem;
+    color: #cbd5e1;
+    font-size: 0.9rem;
+}
+
+.form-group input, 
+.form-group select {
+    padding: 0.75rem;
+    background-color: #0f172a;
+    border: 1px solid #334155;
+    border-radius: 4px;
+    color: #f8fafc;
+    font-size: 1rem;
+}
+
+.form-group input:focus, 
+.form-group select:focus {
+    outline: none;
+    border-color: #38bdf8;
+}
+
+.btn-block {
+    width: 100%;
+    margin: 1rem 0 0 0;
+    cursor: pointer;
+}
+
+.auth-footer {
+    margin-top: 1.5rem;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #94a3b8;
+}
+
+.auth-footer a {
+    color: #38bdf8;
+    text-decoration: none;
+}
+
+.alert {
+    padding: 0.75rem 1rem;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+}
+
+.alert-danger {
+    background-color: #7f1d1d;
+    color: #fca5a5;
+    border: 1px solid #991b1b;
+}
+
+.alert-success {
+    background-color: #064e3b;
+    color: #6ee7b7;
+    border: 1px solid #065f46;
+}
+
+/* Paneles, Tablas y Formularios */
+.panel-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #1e293b;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.data-table th, .data-table td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #334155;
+}
+
+.data-table th {
+    background-color: #0f172a;
+    color: #38bdf8;
+}
+
+.thumb-img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.badge {
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.badge-disponible { background-color: #065f46; color: #a7f3d0; }
+.badge-reservada  { background-color: #854d0e; color: #fef08a; }
+.badge-vendida    { background-color: #991b1b; color: #fecaca; }
+
+.btn-sm {
+    padding: 0.35rem 0.75rem;
+    font-size: 0.85rem;
+    border-radius: 4px;
+    text-decoration: none;
+}
+
+.btn-danger { background-color: #dc2626; color: #ffffff; }
+
+.form-container {
+    background-color: #1e293b;
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid #334155;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.span-2 { grid-column: span 2; }
+
+textarea {
+    background-color: #0f172a;
+    border: 1px solid #334155;
+    color: #f8fafc;
+    padding: 0.75rem;
+    border-radius: 4px;
+    width: 100%;
+}
+
+/* Catálogo de Galerías */
+.catalogo-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.catalogo-header h1 {
+    font-size: 2.2rem;
+    color: #f8fafc;
+}
+
+.galerias-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 2rem;
+}
+
+.card-galeria {
+    background-color: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s, border-color 0.2s;
+}
+
+.card-galeria:hover {
+    transform: translateY(-5px);
+    border-color: #38bdf8;
+}
+
+.card-header-3d {
+    background: linear-gradient(135deg, #0284c7, #0f172a);
+    padding: 1.5rem;
+    text-align: right;
+}
+
+.badge-3d {
+    background-color: rgba(15, 23, 42, 0.8);
+    padding: 0.3rem 0.7rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    color: #38bdf8;
+    border: 1px solid #38bdf8;
+}
+
+.card-body {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.card-body h3 {
+    margin-bottom: 0.5rem;
+    color: #f1f5f9;
+}
+
+.artista-tag {
+    font-size: 0.85rem;
+    color: #94a3b8;
+    margin-bottom: 1rem;
+}
+
+.desc {
+    font-size: 0.9rem;
+    color: #cbd5e1;
+    margin-bottom: 1.5rem;
+    flex: 1;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #334155;
+    padding-top: 1rem;
+}
+
+.obras-count {
+    font-size: 0.85rem;
+    color: #94a3b8;
+}

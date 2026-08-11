@@ -1,0 +1,10 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    
+    # Si la petición no es un archivo físico ni una carpeta existente
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    
+    # Redirigir todo hacia index.php pasando el parámetro url
+    RewriteRule ^(.*)$ index.php?url=$1 [QSA,L]
+</IfModule>
